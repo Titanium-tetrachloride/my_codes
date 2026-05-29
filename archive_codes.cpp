@@ -1,3 +1,403 @@
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    multiset<int> s;
+    int g, c, l;
+    cin >> g >> c >> l;
+    s.insert(g);
+    s.insert(c);
+    s.insert(l);
+    int m = *s.begin();
+    int i = *--s.end();
+    if((i-m)>=10) cout << "check again\n";
+    else cout <<"final " <<*(++s.begin());
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+signed main()
+{
+    ll a = 4; ll b = 18;
+    cout << (4*(3+15))/2;
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int t; cin >> t;
+    while(t--){
+    int a, b, c, d;
+    cin >> a >>b>>c>>d;
+    if(a==b && b==c && c==d) cout << "Yes\n";
+    else cout << "No\n";
+}
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int n;
+    cin >> n;
+    cout << n+1 << '\n';
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int t; cin >> t;
+    while(t--){
+    map<char, int> m;
+    m.insert(make_pair('T',1));
+    m.insert(make_pair('i',1));
+    m.insert(make_pair('m',1));
+    m.insert(make_pair('u',1));
+    m.insert(make_pair('r',1));
+    map<char, int> mp;
+    int n; cin >> n;
+    for(int i=0; i<n; ++i)
+    {
+        char c; cin >> c;
+        mp[c]++;
+    }
+    if(mp == m) cout << "Yes\n";
+    else cout << "No\n";
+}
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+void sol()
+{
+    map<char, int> m1;
+    map<char, int> m2;
+    int n; cin >> n;
+    for(int i=0; i<n; ++i)
+    {
+        char c; cin >> c; m1[c]++;
+    }
+    for(int i=0; i<n; ++i)
+    {
+        char c; cin >> c; m2[c]++;
+    }
+    if(m1==m2) cout << "YES\n";
+    else cout << "NO\n";
+}
+int main()
+{
+    cin.tie(0)->ios_base::sync_with_stdio(0);
+    int t; cin >> t;
+    while(t--)
+    {
+        sol();
+    }
+}*/
+/*#include <iostream>
+using namespace std;
+const int N = 26;
+int cnt1[N];
+int cnt2[N];
+signed main()
+{
+    int t; cin >> t;
+    while(t--)
+    {
+        for(int i=0; i<26; ++i) cnt1[i]=cnt2[i]=0;
+        int n; cin >> n;
+        string s, f; cin >> s >> f;
+        for(char &c : s) cnt1[c-'a']++;
+        for(char &c : f) cnt2[c-'a']++;
+        bool ans = true;
+        for(int i=0; i<26; ++i)
+        {
+            if(cnt1[i]!=cnt2[i]) ans = false;
+        }
+        puts(ans ? "YES":"NO");
+    }
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int t; cin >> t;
+    while(t--)
+    {
+        int n; cin >> n;
+        vector<int> v;
+        for(int i=0; i<n; ++i)
+        {
+            int x; cin >> x;
+            v.push_back(x);
+        }
+        for(int i=0; i<(n-1); ++i)
+        {
+            if((v[i]%2)!=(v[i+1]%2))
+            {
+                swap(v[i],v[i+1]);
+            }
+            for(int i=0; i<n; ++i)
+            {
+                cout << v[i] << " "; 
+            }
+            cout << endl;
+        }
+    }
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+void sol()
+{
+    vector<int> v;
+    int n, k; cin >> n >> k;
+    for(int i=0; i<n; ++i)
+    {
+        int x; cin >> x; v.push_back(x);
+    }
+    vector<int> &r = v;
+    sort(r.begin(), r.end());
+    if(v==r) cout << "YES\n";
+    if(k==1) cout << "NO\n";
+    if(k>1) cout << "YES\n";
+}
+signed main()
+{
+    int t; cin >> t;
+    while(t--)
+    {
+        sol();
+    }
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int n, sum=0;
+    cin >> n;
+    for(int i=1; i<=n; ++i) sum +=i;
+    cout << sum << endl;
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    vector<int> v; int n, ans=0; cin >> n;
+    for(int i=0; i<n; ++i)
+    {
+        int x; cin >> x; v.push_back(x);
+    }
+    for(int r=0; r<n; ++r)
+    {
+        for(int l=0; l<r; ++l)
+        {
+            int s=0;
+            for(int i=l; i<=r; ++i) s+=v[i];
+            bool flag = true;
+            for(int k=l; k<=r; ++k)
+            {
+                if(s%v[k]==0) flag=false;
+            }
+            if(flag) ans++;
+        }
+    }
+    cout << ans << endl;
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+  int n ; cin >> n; int c=0; vector<int> v;
+  for(int i=0; i<n; ++i)
+  {
+    int x; cin >> x; v.push_back(x);
+  }
+  
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int n; cin >> n;
+    int arr[n][n];
+    for(int i=0; i<n; ++i)
+    {
+        for(int j=0;j<n; ++j) cin >> arr[i][j];
+    }
+    for(int i=0; i<n; ++i){
+        for(int j=0; j<n; ++j) cout << arr[j][i] << " ";
+        cout << '\n';
+    }
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int t; cin >> t;
+    while(t--){
+    int n; cin >> n; bool even = false, odd=false;
+    vector<int> v;
+    for(int i=0; i<n; ++i)
+    {
+        int x; cin >> x;
+        v.push_back(x);
+        if(v[i]&1) even = true;
+        else odd = true;
+       }
+       if(even and odd) sort(v.begin(), v.end());
+       for(int i=0; i<n; ++i) cout << v[i] << " ";
+       cout << '\n';
+}
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+using ll = int64_t;
+int gcd(int A, int B)
+{
+    int m = min(A,B);
+    set<int> s;
+    for(int i=1; i<=m; ++i)
+    {
+        if(A%i==0 && B%i==0) s.insert(i);
+    }
+    return *--s.end();
+}
+void sol()
+{
+    int n;ll ans=0; cin >> n;
+    vector<int> v;
+    bool ok = false;
+    for(int i=0; i<n; ++i)
+    {
+        int b; cin >> b;
+        v.push_back(b);
+    }
+    for(int i=1; i<=n; ++i)
+    {
+        for(ll x=2; x<=1e18; ++x)
+        {
+            if(gcd(v[i],x) == 1)
+            {
+                 ok = true;
+                 ans = x;
+                 break;
+            }
+        }
+    }
+    if(ok) cout << ans<< '\n';
+    else cout << -1 << '\n';
+}
+signed main() 
+{
+    int t; cin >> t;
+    while(t--)
+    {
+        sol();
+    }
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int __;
+    for(cin >> __; __--;)
+    {
+    vector<int> v; int ans = 0;
+    int x, n; cin >> x >> n;
+    for(int i=0; i<n; ++i)
+    {
+        if(i&1) v.push_back(x*-1);
+        else v.push_back(x);
+    }
+    for(int i=0; i<n; ++i)
+    {
+        ans+=v[i];
+    }
+    cout << ans << '\n';
+}
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int __;
+    for(cin >> __;__--;)
+    {
+        int n, k; cin>> n >> k;
+        vector<int> v(n);
+        for(int i=0; i<n; ++i) cin >> v[i];
+        vector<int> r=v;
+        sort(r.begin(), r.end());
+        if(v==r) cout << "YES\n";
+        else if(k>=2) cout << "YES\n";
+        else cout << "NO\n";
+    }
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n, m, ans;
+	cin >> n >> m;
+	while(m--)
+    {
+        n=n-1;
+        if(n==0) break;
+    }
+    cout << n << '\n';
+
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+signed main()
+{
+    int n, m, x=0;
+    cin >> n >> m;
+    for(int i=0; i<n; ++i)
+    {
+        x+=1;
+    }
+}*/
+/*#include <bits/stdc++.h>
+#include <numeric>
+using namespace std;
+signed main()
+{
+  int t; scanf("%d", &t);
+while(t--)
+{
+  int x; cin >> x;
+  int y, b;
+ vector<int> v;
+for(y=1; y<=x;++y){
+   b = gcd(x,y)+y;
+   v.push_back(b);
+}
+sort(v.begin(), v.end());
+cout << v[v.size()-1] << '\n';
+}
+}*/
+/*#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t; scanf("%d", &t);
+    while(t--)
+    {
+        int n, x=0; scanf("%d",&n);
+        vector<int> v(n);
+        for(int i=0; i<n; ++i) scanf("%d",&v[i]);
+        vector<int> r=v; sort(r.begin(), r.end());
+        if(r==v) cout << 0 << '\n';
+        else{
+            while(v!=r){
+        for(int i=0; i<n-1; ++i)
+        {
+            if(v[i]>v[i+1]) v.erase(v.begin()+i);
+            ++x;
+        }
+            printf("%d\n", x);
+    }}
+}}*/
 /*include <bits/stdc++.h>
 using namespace std;
 int main()
