@@ -110,13 +110,16 @@ namespace fst {
     }
 }
 
-inline void sol(){}
+inline void sol(){
+	//solution here
+}
 
 int32_t main(){
      #ifndef ONLINE_JUDGE
             freopen("in.txt","r",stdin);
             freopen("out.txt","w",stdout);
         #endif
+	sol();
 	flush();
     return 0;
 }
